@@ -1,4 +1,4 @@
-# [Are we Wayland yet?](https://arewewaylandyet.com)
+# [We are Wayland now!](https://wearewaylandnow.com)
 
 I think so... This is an opinionated answer, if you disagree or if you think
 something is missing, I would love to hear about it, please open an issue or a
@@ -23,8 +23,8 @@ interesting comments and valuable links, it is worth
 1. Get the code
 
 ```bash
-git clone git@github.com:mpsq/arewewaylandyet.git
-cd arewewaylandyet
+git clone git@github.com:gianklug/wearewaylandnow.git
+cd wearewaylandnow
 ```
 
 2. Install dependencies

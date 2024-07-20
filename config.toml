@@ -1,6 +1,6 @@
-baseURL = "https://arewewaylandyet.com/"
+baseURL = "https://wearewaylandnow.com/"
 languageCode = "en-us"
-title = "Are we Wayland yet?"
+title = "We are wayland now!"
 
 disableKinds = ["taxonomy", "taxonomyTerm"]
 
