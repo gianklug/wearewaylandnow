@@ -40,13 +40,18 @@ button {
 
 .title--question {
   margin-top: 6rem;
-  font-size: 3rem;
+  font-size: 2rem;
   color: var(--palette-gray);
 }
 
 .title--answer {
   margin: 4rem 0;
-  font-size: 4rem;
+  font-size: 3rem;
+}
+
+.title--mostly {
+  color: var(--palette-gray);
+  font-size: 1.2rem;
 }
 
 .title--not-found {

@@ -3,7 +3,7 @@
 
 	{{ partial "title" . }}
 
-  <h2 class="title--answer">Yes, we are <a href="https://wayland.freedesktop.org/" class="accent--wayland wayland">Wayland</a> now!</h2>
+  <h2 class="title--answer">Yes, we are <a href="https://wayland.freedesktop.org/" class="accent--wayland wayland">Wayland</a> now! <span class="title--mostly">(mostly)</span></h2>
 
   <section class="section">
     <p class="section__title">OK, but where is my:</p>
@@ -324,12 +324,16 @@
     </p>
     <ul class="section__list">
       <li class="list__item--kinda">
-        With limitations/caveats it runs, on
+        With <a href="https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver">a workaround</a> it runs, on
         <a href="https://wiki.gnome.org/Initiatives/Wayland/NVIDIA">GNOME</a>
       </li>
       <li class="list__item--kinda">
-        With limitations/caveats it runs, on
+        With <a href="https://community.kde.org/Plasma/Wayland/Nvidia">limitations/caveats</a> it runs, on
         <a href="https://community.kde.org/Plasma/Wayland/Nvidia">KDE</a>
+      </li>
+      <li class="list__item--kinda">
+        With <a href="https://wiki.hyprland.org/Nvidia/">limitations/caveats</a> it runs, on
+        <a href="https://hyprland.org/">Hyprland</a>
       </li>
       <li class="list__item--kinda">
         When using the nouveau driver, it runs on
