@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<main aria-role="main">
+  {{ if isset .Data "Term" }}
+  <h1 class="page-title">Tag: {{ .Data.Term }}</h1>
+  {{ else }}
+  <h1 class="page-title">{{ .Title }}</h1>
+  {{ end }}
+
+  <div class="row">
+    {{ .Content }}
+  </div>
+
+  <div class="posts">
+    {{- range .Data.Pages -}}
+    {{- if (not (in (.Site.Params.excludedTypes | default (slice "page")) .Type)) -}}
+    <div class="post">
+      <span class="post-title">
+        <a href="{{ .RelPermalink }}">{{.Title}}</a>
+      </span>
+      <span class="tags">
+        {{ range .Params.tags }}
+        <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+        {{ end }}
+      </span>
+    </div>
+    {{- end -}}
+    {{- end -}}
+  </div>
+</main>
+{{ end }}

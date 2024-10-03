@@ -1,0 +1,39 @@
+{{ define "main" }}
+<main>
+  <article>
+    <div class="title">
+      <h1 class="title">{{ .Title }}</h1>
+      <div class="post-tags">
+        {{ if ne .Type "page" }}
+        {{ if gt .Params.tags 0 }}
+        <span class="tags">
+          {{ range .Params.tags }}
+          <a href="/tags/{{ . | urlize }}">{{ . }}</a>
+          {{ end }}
+        </span>
+        {{ end }}
+        {{ end }}
+      </div>
+    </div>
+    {{ if isset .Params "tldr" }}
+    <div class="tldr">
+      <strong>tl;dr:</strong>
+      {{ .Params.tldr }}
+    </div>{{ end }}
+
+    <section class="body">
+      {{ .Content }}
+    </section>
+
+    {{- $.Scratch.Set "isDisqus" true -}}
+    <!-- Check if disqus short name is given -->
+    {{ if not .Site.DisqusShortname }}
+    {{- $.Scratch.Set "isDisqus" false -}}
+    {{ end }}
+
+    {{- if eq ($.Scratch.Get "isDisqus") true -}}
+    {{- partial "disqus.html" . -}}
+    {{- end -}}
+  </article>
+</main>
+{{ end }}

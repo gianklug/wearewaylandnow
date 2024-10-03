@@ -3,9 +3,11 @@
   --palette-gray: #666666;
   --palette-light-gray: #666666;
   --palette-green: #4caf50;
-  --palette-nvidia: #76b900; /* official color */
+  --palette-nvidia: #76b900;
+  /* official color */
   --palette-red: #f44336;
-  --palette-wayland: #ffbc00; /* official color */
+  --palette-wayland: #ffbc00;
+  /* official color */
   --palette-white: #fafafa;
 }
 
@@ -56,6 +58,20 @@ button {
 
 .title--not-found {
   margin: 4rem 0;
+}
+
+.title--mini {
+  margin: 1rem;
+  margin-top: 1.5rem;
+  display: block;
+  text-decoration: none;
+  color: var(--palette-black);
+  font-weight: 600;
+}
+
+.title--mini:hover {
+  text-decoration: none;
+  cursor: pointer;
 }
 
 .weight--400 {
@@ -191,7 +207,57 @@ main {
   color: var(--palette-gray);
 }
 
-@media (max-width: 812px) {
+.links {
+  display: flex;
+  padding: 1em;
+}
+
+.links>a {
+  text-decoration: none;
+  margin: 1rem;
+  margin-top: 1.5rem;
+  font-weight: 800;
+}
+
+.links>a:hover {
+  text-decoration: underline;
+}
+
+.posts .post {
+  border: 1px solid var(--palette-light-gray);
+  border-radius: 5px;
+  padding: 12px;
+  margin: 5px;
+}
+
+.post .post-title {
+  font-size: 1.2em;
+  font-weight: 600;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  display: block;
+}
+
+.post .post-title a {
+  text-decoration: none;
+  color: var(--palette-black);
+}
+
+.tags {
+  display: flex;
+}
+
+.tags a {
+  text-decoration: none;
+  background-color: var(--palette-gray);
+  color: var(--palette-white);
+  font-size: 0.8em;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 2px;
+}
+
+@media (max-width: 800px) {
   h1 {
     margin-top: 4rem;
   }
@@ -199,5 +265,24 @@ main {
   h2 {
     margin: 3rem 0;
     font-size: 5rem;
+  }
+
+  .links {
+    display: block;
+    padding: 1em;
+  }
+
+  .links>a {
+    margin: 1px;
+    margin-bottom: 1em;
+    display: block;
+  }
+
+  .notes {
+    padding: 1.5em;
+  }
+
+  .title--mini {
+    margin: 1.5rem 0 2rem 0;
   }
 }
