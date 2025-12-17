@@ -1,9 +1,10 @@
 {{ define "main" }}
 <main aria-role="main">
 
-	{{ partial "title" . }}
+  {{ partial "title" . }}
 
-  <h2 class="title--answer">Yes, we are <a href="https://wayland.freedesktop.org/" class="accent--wayland wayland">Wayland</a> now! <span class="title--mostly">(mostly)</span></h2>
+  <h2 class="title--answer">Yes, we are <a href="https://wayland.freedesktop.org/"
+      class="accent--wayland wayland">Wayland</a> now! <span class="title--mostly">(mostly)</span></h2>
 
   <section class="section">
     <p class="section__title">OK, but where is my:</p>
@@ -57,9 +58,11 @@
         <a href="https://www.enlightenment.org">Enlightenment (experimental)</a>,
         <a href="https://www.gnome.org/">GNOME</a>,
         <a href="https://kde.org/plasma-desktop">KDE Plasma</a>,
-        <a href="https://lxqt-project.org">LXQt</a> <a href="https://github.com/lxqt/lxqt-wayland-session/">(Experimental)</a>,
+        <a href="https://lxqt-project.org">LXQt</a> <a
+          href="https://github.com/lxqt/lxqt-wayland-session/">(Experimental)</a>,
         <a href="https://mate-desktop.org">MATE Desktop (partial)</a>,
-        <a href="https://github.com/linuxmint/cinnamon">Cinnamon</a> <a href="https://www.linuxmint.com/rel_virginia_whatsnew.php">(Experimental)</a>
+        <a href="https://github.com/linuxmint/cinnamon">Cinnamon</a> <a
+          href="https://www.linuxmint.com/rel_virginia_whatsnew.php">(Experimental)</a>
       </li>
       <li class="list__item--ok">
         Discord clients and workarounds:
@@ -77,7 +80,8 @@
       </li>
       <li class="list__item--ok">
         Document viewer:
-        <a href="https://wiki.mate-desktop.org/mate-desktop/applications/atril/">Atril (part of MATE, but can be used standalone)</a>,
+        <a href="https://wiki.mate-desktop.org/mate-desktop/applications/atril/">Atril (part of MATE, but can be used
+          standalone)</a>,
         <a href="https://gitlab.gnome.org/GNOME/evince">Evince</a>,
         <a href="https://apps.kde.org/okular">Okular</a>,
         <a href="https://apps.gnome.org/Papers">Papers</a>,
@@ -102,32 +106,32 @@
       <li class="list__item--ok">
         Emulators:
         <a href="https://cemu.info/">Cemu</a>,
-      	<a href="https://rpcs3.net/">RPCS3</a>
+        <a href="https://rpcs3.net/">RPCS3</a>
         <a href="https://shadps4.net">ShadPS4</a>,
         <a href="https://www.retroarch.com/">Retroarch</a>,
         <a href="https://xemu.app">Xemu</a>,
         <a href="https://xenia.jp">Xenia</a>,
-      </li>	    
+      </li>
       <li class="list__item--ok">
         File manager:
         <a href="https://apps.kde.org/dolphin">Dolphin</a>,
         <a href="https://apps.gnome.org/en/Nautilus">Nautilus</a>,
         <a href="https://github.com/linuxmint/nemo">Nemo</a>,
         <a href="https://github.com/lxde/pcmanfm">PCManFM</a>,
-      	<a href="https://github.com/lxqt/pcmanfm-qt">PCManFM-Qt</a>,
+        <a href="https://github.com/lxqt/pcmanfm-qt">PCManFM-Qt</a>,
         <a href="https://gitlab.xfce.org/xfce/thunar">Thunar</a>
       </li>
       <li class="list__item--ok">
         Game Launchers:
-	<a href="https://usebottles.com/">Bottles</a>,
-	<a href="https://heroicgameslauncher.com/">Heroic Games Launcher</a>,
+        <a href="https://usebottles.com/">Bottles</a>,
+        <a href="https://heroicgameslauncher.com/">Heroic Games Launcher</a>,
         <a href="https://lutris.net">Lutris</a>,
-      </li>	    
+      </li>
       <li class="list__item--ok">
         Gaming Utilities:
-	<a href="https://github.com/Matoking/protontricks">Protontricks</a>,
+        <a href="https://github.com/Matoking/protontricks">Protontricks</a>,
         <a href="https://github.com/Winetricks/winetricks">Winetricks</a>,
-      </li>	    
+      </li>
       <li class="list__item--ok">
         Gamma & day/night adjustment tool:
         <a href="https://github.com/FedeDP/Clight">Clight</a>,
@@ -309,7 +313,7 @@
       <li class="list__item--ok">
         Supported games:
         <a href="https://github.com/Twig6943/Wayland-Gaming/tree/main/Games">Twig6943/Wayland-Gaming</a>,
-      </li>		    
+      </li>
       <li class="list__item--ok">
         System monitoring widget:
         <a href="https://sr.ht/~kennylevinsen/wldash/">wldash</a>
@@ -361,8 +365,8 @@
         Video player:
         <a href="https://github.com/Rafostar/clapper">Clapper</a>,
         <a href="https://apps.kde.org/dragonplayer">Dragon Player<a>,
-        <a href="https://apps.kde.org/haruna">Haruna</a>,
-        <a href="https://mpv.io">mpv</a>
+            <a href="https://apps.kde.org/haruna">Haruna</a>,
+            <a href="https://mpv.io">mpv</a>
       </li>
       <li class="list__item--ok">
         Wallpaper manager:
@@ -400,20 +404,27 @@
     <ul class="section__list">
       <li class="list__item--kinda">
         Color management and HDR:
-        <a href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/14">Protocol has been officially merged</a>, <a href="https://wiki.archlinux.org/title/KDE#HDR">experimental support in KDE Plasma</a>, <a href="https://github.com/hyprwm/Hyprland/pull/8715">mostly working in Hyprland</a>, <a href="https://phabricator.services.mozilla.com/D233252">support in programs such as Firefox in the making</a>
+        <a href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/14">Protocol has been
+          officially merged</a>, <a href="https://wiki.archlinux.org/title/KDE#HDR">experimental support in KDE
+          Plasma</a>, <a href="https://github.com/hyprwm/Hyprland/pull/8715">mostly working in Hyprland</a>, <a
+          href="https://phabricator.services.mozilla.com/D233252">support in programs such as Firefox in the making</a>
       </li>
       <li class="list__item--kinda">
         Global hotkeys and PTT:
         <a href="https://github.com/flatpak/xdg-desktop-portal/pull/711">Portal has been developed</a>,
-        <a href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/issues/47#note_2072317">implementation in GNOME</a> <a href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/merge_requests/166">(ongoing)</a>,
-        <a href="https://wiki.hyprland.org/Configuring/Binds/#global-keybinds">supported on Hyprland using a custom implementation</a>
+        <a href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/issues/47#note_2072317">implementation in
+          GNOME</a> <a
+          href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/merge_requests/166">(ongoing)</a>,
+        <a href="https://wiki.hyprland.org/Configuring/Binds/#global-keybinds">supported on Hyprland using a custom
+          implementation</a>
       </li>
       <li class="list__item--kinda">
         Displaylink driver for:
         <a href="https://www.gnome.org">GNOME</a>,
         <a href="https://kde.org/plasma-desktop">KDE Plasma</a>,
         <a href="https://hyprland.org">Hyprland</a>/<a href="https://github.com/hyprwm/aquamarine">aquamarine</a>,
-        <a href="https://github.com/swaywm/sway">Sway</a>/<a href="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots:</a>
+        <a href="https://github.com/swaywm/sway">Sway</a>/<a
+          href="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots:</a>
         <a href="https://gitlab.freedesktop.org/wlroots/wlroots/-/issues/1823">Issue on gitlab with a possible patch</a>
       </li>
     </ul>
@@ -426,7 +437,8 @@
     </p>
     <ul class="section__list">
       <li class="list__item--kinda">
-        With <a href="https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver">extra steps</a> it runs, on
+        With <a href="https://wiki.archlinux.org/title/GDM#Wayland_and_the_proprietary_NVIDIA_driver">extra steps</a> it
+        runs, on
         <a href="https://wiki.gnome.org/Initiatives/Wayland/NVIDIA">GNOME</a>
       </li>
       <li class="list__item--kinda">
@@ -439,7 +451,8 @@
       </li>
       <li class="list__item--kinda">
         When using the nouveau driver, it runs on
-        <a href="https://github.com/swaywm/sway">Sway</a>/<a href="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots</a>
+        <a href="https://github.com/swaywm/sway">Sway</a>/<a
+          href="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots</a>
       </li>
     </ul>
   </section>
@@ -450,7 +463,9 @@
     </p>
     <ul class="section__list">
       <li class="list__item--ko">
-        <a href="https://orca.gnome.org/">Orca</a>, a screen reader is currently broken on Wayland due to a variety of <a href="https://gitlab.gnome.org/GNOME/orca/-/issues/?sort=created_date&state=opened&search=wayland&first_page_size=20">issues</a>.</br />
+        <a href="https://orca.gnome.org/">Orca</a>, a screen reader is currently broken on Wayland due to a variety of
+        <a
+          href="https://gitlab.gnome.org/GNOME/orca/-/issues/?sort=created_date&state=opened&search=wayland&first_page_size=20">issues</a>.</br />
         <a href="https://gitlab.gnome.org/GNOME/orca/-/issues/440">#440</a>,
         <a href="https://gitlab.gnome.org/GNOME/orca/-/issues/455">#455</a> and
         <a href="https://gitlab.gnome.org/GNOME/orca/-/issues/483">#483</a> are currently blocking the progress.
