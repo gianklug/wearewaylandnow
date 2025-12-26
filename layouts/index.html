@@ -4,7 +4,7 @@
   {{ partial "title" . }}
 
   <h2 class="title--answer">Yes, we are <a href="https://wayland.freedesktop.org/"
-      class="accent--wayland wayland">Wayland</a> now! <span class="title--mostly">(mostly)</span></h2>
+      class="accent--wayland wayland">Wayland</a> now! <s class="title--mostly">(mostly)</s></h2>
 
   <section class="section">
     <p class="section__title">OK, but where is my:</p>
@@ -41,6 +41,11 @@
         <a href="https://github.com/bugaevc/wl-clipboard">wl-clipboard</a>
       </li>
       <li class="list__item--ok">
+        Color management and HDR:
+        <a href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/14">Wayland protoco existsl</a>, <a href="https://wiki.archlinux.org/title/KDE#HDR">stable support in KDE
+						Plasma</a>, <a href="https://github.com/hyprwm/Hyprland/pull/8715">Hyprland</a>, <a href="https://wiki.archlinux.org/title/HDR#Firefox">Firefox</a>. <a href="https://wiki.archlinux.org/title/HDR">-> ArchWiki/HDR</a>
+      </li>
+      <li class="list__item--ok">
         Color picker:
         <a href="https://github.com/nwg-piotr/azote">Azote</a>,
         <a href="https://gitlab.gnome.org/World/gcolor3">gcolor3</a>,
@@ -70,6 +75,14 @@
         <a href="https://github.com/Rush/wayland-push-to-talk-fix">Push to talk fix</a>,
         <a href="https://github.com/Vencord/Vesktop">Vesktop</a>,
         <a href="https://github.com/SpacingBat3/WebCord">WebCord</a>
+      </li>
+      <li class="list__item--ok">
+        Displaylink driver:
+        <a href="https://www.gnome.org">GNOME</a>,
+        <a href="https://kde.org/plasma-desktop">KDE Plasma</a>,
+        <a href="https://hyprland.org">Hyprland</a>/<a href="https://github.com/hyprwm/aquamarine">aquamarine</a>,
+        <a href="https://github.com/swaywm/sway">Sway</a>/<a
+          href="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots</a>
       </li>
       <li class="list__item--ok">
         Dock:
@@ -141,6 +154,13 @@
         <a href="https://sr.ht/~kennylevinsen/wlsunset/">wlsunset</a>,
         <a href="https://github.com/maximbaz/wluma">wluma</a>,
         <a href="https://github.com/mischw/wl-gammactl">wl-gammactl</a>
+      </li>
+      <li class="list__item--ok">
+        Global hotkeys and PTT:
+        <a href="https://github.com/flatpak/xdg-desktop-portal/pull/711">Portal has been developed</a>,
+        <a href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/merge_requests/208">implemented in
+          GNOME</a>, <a href="https://wiki.hyprland.org/Configuring/Binds/#global-keybinds">supported on Hyprland using a custom
+          implementation</a>
       </li>
       <li class="list__item--ok">
         Hot corners:
@@ -395,36 +415,6 @@
         <a href="https://github.com/elkowar/eww">eww</a>,
         <a href="https://wiki.ffpy.org/">Fabric</a>,
         <a href="https://github.com/linkfrg/ignis">Ignis</a>
-      </li>
-    </ul>
-  </section>
-
-  <section class="section">
-    <p class="section__title">Working in some setups:</p>
-    <ul class="section__list">
-      <li class="list__item--kinda">
-        Color management and HDR:
-        <a href="https://gitlab.freedesktop.org/wayland/wayland-protocols/-/merge_requests/14">Protocol has been
-          officially merged</a>, <a href="https://wiki.archlinux.org/title/KDE#HDR">good support in KDE
-          Plasma</a>, <a href="https://github.com/hyprwm/Hyprland/pull/8715">mostly working in Hyprland</a>, <a
-          href="https://phabricator.services.mozilla.com/D233252">support in programs such as Firefox in the making</a>
-      </li>
-      <li class="list__item--kinda">
-        Global hotkeys and PTT:
-        <a href="https://github.com/flatpak/xdg-desktop-portal/pull/711">Portal has been developed</a>,
-        <a href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/issues/47#note_2072317">implementation in
-          GNOME</a> <a
-          href="https://gitlab.gnome.org/GNOME/xdg-desktop-portal-gnome/-/merge_requests/166">(ongoing)</a>,
-        <a href="https://wiki.hyprland.org/Configuring/Binds/#global-keybinds">supported on Hyprland using a custom
-          implementation</a>
-      </li>
-      <li class="list__item--kinda">
-        Displaylink driver exists for:
-        <a href="https://www.gnome.org">GNOME</a>,
-        <a href="https://kde.org/plasma-desktop">KDE Plasma</a>,
-        <a href="https://hyprland.org">Hyprland</a>/<a href="https://github.com/hyprwm/aquamarine">aquamarine</a>,
-        <a href="https://github.com/swaywm/sway">Sway</a>/<a
-          href="https://gitlab.freedesktop.org/wlroots/wlroots">wlroots</a>
       </li>
     </ul>
   </section>
