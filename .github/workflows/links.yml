@@ -35,10 +35,10 @@ jobs:
             --no-progress
             --exclude-all-private
             --root-dir ${{ github.workspace }}/public
-            --base-url https://wearewaylandnow.com
             --include-verbatim --include-wikilinks --include-fragments
             './**/*.toml' 'public/**/*.html' './**/*.json'
 
+#            --base-url https://wearewaylandnow.com
 #            --exclude-path _old
 #            --accept '100..=103,200..=299'
 #            --suggest      # Suggest link replacements for broken links, using a web archive
