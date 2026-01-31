@@ -11,7 +11,7 @@ You might've noticed that you aren't getting any mobile notifications while Disc
 **Screen Sharing**
 
 As Discord doesn't support screen sharing via pipewire, you're usually better off by using the browser version or [WebCord](https://github.com/SpacingBat3/WebCord). There is another workaround, namely `xwaylandvideobridge`. This creates an Xorg window, mirroring your pipewire screen sharing for Discord to pick it up:  
-[https://invent.kde.org/system/xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) ([AUR package](https://archlinux.org/packages/extra/x86_64/xwaylandvideobridge/))
+[https://invent.kde.org/system/xwaylandvideobridge](https://invent.kde.org/system/xwaylandvideobridge) ([AUR package](https://aur.archlinux.org/packages/xwaylandvideobridge))
 
 **Push to talk**
 
