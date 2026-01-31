@@ -35,6 +35,7 @@ jobs:
             --no-progress
             --exclude-all-private
             --base-url https://wearewaylandnow.com
+            --exclude-path public/categories --exclude-path public/tags
             --include-verbatim --include-wikilinks --include-fragments
             './**/*.toml' 'public/**/*.html' './**/*.json'
 
