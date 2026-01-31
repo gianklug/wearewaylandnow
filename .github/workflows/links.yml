@@ -13,6 +13,18 @@ jobs:
 #      issues: write                # required for peter-evans/create-issue-from-file
     steps:
       - uses: actions/checkout@v6
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@https://github.com/peaceiris/actions-hugo/commit/75d2e84710de30f6ff7268e08f310b60ef14033f  # for v3
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
 
       - name: Link Checker
         id: lychee
@@ -22,13 +34,13 @@ jobs:
           args: |
             --no-progress
             --exclude-all-private
+            --root-dir ${{ github.workspace }}/public
             --base-url https://wearewaylandnow.com
             --include-verbatim --include-wikilinks --include-fragments
-            './**/*.md' './**/*.toml' './**/*.html' './**/*.json'
+            './**/*.toml' 'public/**/*.html' './**/*.json'
 
 #            --exclude-path _old
 #            --accept '100..=103,200..=299'
-#            --root-dir "$(pwd)"
 #            --suggest      # Suggest link replacements for broken links, using a web archive
 
 #      - name: Create Issue From File
