@@ -24,7 +24,7 @@ jobs:
             --exclude-all-private
             --base-url https://wearewaylandnow.com
             --include-verbatim --include-wikilinks --include-fragments
-            './**/*.md' './**/*.toml' './**/*.html' ./**/*.json'
+            './**/*.md' './**/*.toml' './**/*.html' './**/*.json'
 
 #            --exclude-path _old
 #            --accept '100..=103,200..=299'
