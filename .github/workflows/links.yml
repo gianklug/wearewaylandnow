@@ -1,0 +1,53 @@
+name: Links
+
+on:
+  repository_dispatch:
+  workflow_dispatch:
+  schedule:
+    - cron: "00 07 * * 6"
+
+jobs:
+  linkChecker:
+    runs-on: ubuntu-latest
+    permissions:
+      issues: write                # required for peter-evans/create-issue-from-file
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          submodules: true  # Fetch Hugo themes (true OR recursive)
+          fetch-depth: 0    # Fetch all history for .GitInfo and .Lastmod
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@75d2e84710de30f6ff7268e08f310b60ef14033f  # for v3
+        with:
+          hugo-version: 'latest'
+          # extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@a8c4c7cb88f0c7386610c35eb25108e448569cb0  # for v2.7.0
+        with:
+          fail: false
+          args: |
+            --no-progress
+            --exclude-all-private
+            --base-url https://wearewaylandnow.com
+            --exclude-path public/categories --exclude-path public/tags
+            --include-verbatim --include-wikilinks --include-fragments
+            './**/*.toml' 'public/**/*.html' './**/*.json'
+
+#            --root-dir ${{ github.workspace }}/public
+#            --exclude-path _old
+#            --accept '100..=103,200..=299'
+#            --suggest      # Suggest link replacements for broken links, using a web archive
+
+      - name: Create Issue From File
+        if: steps.lychee.outputs.exit_code != 0
+        uses: peter-evans/create-issue-from-file@v5
+        with:
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated issue
