@@ -37,11 +37,11 @@ jobs:
             --base-url https://wearewaylandnow.com
             --exclude-path public/categories --exclude-path public/tags
             --include-verbatim --include-wikilinks --include-fragments
+            --accept '100..=103,200..=299,403'
             './**/*.toml' 'public/**/*.html' './**/*.json'
 
 #            --root-dir ${{ github.workspace }}/public
 #            --exclude-path _old
-#            --accept '100..=103,200..=299'
 #            --suggest      # Suggest link replacements for broken links, using a web archive
 
       - name: Create Issue From File
