@@ -38,10 +38,10 @@ jobs:
             --exclude-path public/categories --exclude-path public/tags
             --include-verbatim --include-wikilinks --include-fragments
             --accept '100..=103,200..=299,403'
+            --exclude-path package-lock.json
             './**/*.toml' 'public/**/*.html' './**/*.json'
 
 #            --root-dir ${{ github.workspace }}/public
-#            --exclude-path _old
 #            --suggest      # Suggest link replacements for broken links, using a web archive
 
       - name: Create Issue From File
